@@ -1,0 +1,30 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: linear-gradient(to right, rgb(51, 77, 80), rgb(203, 202, 165));
+    color: #fff;
+}
+
+body .container{
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas: 
+    'header header'
+    'left right'
+    'footer footer';
+}
+
+body .header{
+    grid-area: "header";
+}
+
+body .footer{
+    grid-area: "footer";
+}
+
+body .left {
+    grid-area: "left";
+}
+
+body .right{
+    grid-area: "right";
+}
