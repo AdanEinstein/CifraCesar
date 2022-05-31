@@ -57,7 +57,7 @@ export const cripto = (mensagem, deslocamento) => {
 			"z",
 		],
 	};
-	deslocamento = deslocamento <= 0 ? 0 : --deslocamento;
+	deslocamento = deslocamento <= 0 ? 0 : deslocamento;
 	const letrasPuladas = alfabeto.chave.splice(0, deslocamento);
 	letrasPuladas.forEach((letra) => alfabeto.chave.push(letra));
 	const arrayMsg = mensagem.split("");
