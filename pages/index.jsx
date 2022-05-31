@@ -1,16 +1,39 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Left from "../components/Left";
+import Right from "../components/Right";
+import { useState } from "react";
+import ModoContext from "../contexts/ModoContext"
 
 const Home = () => {
+	const [modo, setModo] = useState("")
 	return (
 		<div className="container">
-			<Header />
-			<div className="left">
-                Left
-            </div>
-            <div className="right">
-                Right
-            </div>
+			<ModoContext.Provider value={{ modo, setModo }}>
+				<Header />
+			</ModoContext.Provider>
+			<div className="main">
+				{modo == "Encriptação" && (
+					<div className="left">
+						<Left />
+					</div>
+				)}
+				{modo == "Decriptação" && (
+					<div className="right">
+						<Right />
+					</div>
+				)}
+				{modo == "Ambos" && (
+					<>
+						<div className="left">
+							<Left />
+						</div>
+						<div className="right">
+							<Right />
+						</div>
+					</>
+				)}
+			</div>
 			<Footer />
 		</div>
 	);

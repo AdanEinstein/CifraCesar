@@ -1,30 +1,106 @@
-body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: linear-gradient(to right, rgb(51, 77, 80), rgb(203, 202, 165));
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	background-image: url("../assets/cifra-body.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+	color: #fff;
+    min-width: 600px;
+}
+
+body .container {
+	display: grid;
+	height: 100vh;
+	grid-template-rows: 100px 1fr 100px;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+}
+
+body .header {
+	grid-area: "header";
+    background-color: rgba(0, 0, 0, 0.636);
+    font-size: larger;
+    line-height: 100px;
+    text-indent: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+body .header select{
+    margin: 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: medium;
+    background-color: rgb(255, 68, 35);
     color: #fff;
+    text-align: center;
 }
 
-body .container{
-    display: grid;
-    grid-template-rows: 100px 1fr 100px;
-    grid-template-areas: 
-    'header header'
-    'left right'
-    'footer footer';
+body .footer {
+	grid-area: "footer";
+    background-color: rgba(0, 0, 0, 0.636);
+    font-size: larger;
+    line-height: 100px;
+    text-indent: 10px;
+}
+body .main {
+    grid-area: "main";
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-body .header{
-    grid-area: "header";
+.main .left{
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.49);
+    border-radius: 5px;
+    width: 90%;
+    margin-right: 5px;
 }
 
-body .footer{
-    grid-area: "footer";
+.main .right{
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.49);
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5px;
 }
 
-body .left {
-    grid-area: "left";
+@media  (max-width: 800px) {
+    body .main {
+        grid-area: "main";
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main .left{
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.536);
+        border-radius: 5px;
+        width: 90%;
+        margin-bottom: 5px;
+    }
+    
+    .main .right{
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.536);
+        border-radius: 5px;
+        width: 90%;
+        margin-top: 5px;
+    }
 }
 
-body .right{
-    grid-area: "right";
-}
+
