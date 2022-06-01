@@ -21,14 +21,18 @@ export default function Right() {
 				onChange={(e) => setMsgCript(e.target.value)}
 			/>
 			<div className={styles.controls}>
-				<input
-					type="number"
-					min="0"
-					max="25"
-					placeholder="Digite o deslocamento"
-                    value={deslocamento}
-                    onChange={e => setDeslocamento(e.target.value)}
-				/>
+				<div>
+					<label htmlFor="deslocamento">Deslocamento</label>
+					<input
+						id="deslocamento"
+						type="number"
+						min="0"
+						max="25"
+						placeholder="Digite o deslocamento"
+										value={deslocamento}
+										onChange={e => setDeslocamento(e.target.value)}
+					/>
+				</div>
 				<button onClick={handleMsg}>Descriptografar</button>
 			</div>
 			<div className={styles.result}>

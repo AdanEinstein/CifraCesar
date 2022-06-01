@@ -28,8 +28,21 @@
     justify-content: space-around;
 }
 
-.controls input{
-    width: 180px;
+.controls > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.controls > div label{
+    margin-right: 5px;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.controls > div input{
+    padding: 5px;
+    width: 50px;
     font-size: medium;
     border: none;
     border-radius: 5px;
