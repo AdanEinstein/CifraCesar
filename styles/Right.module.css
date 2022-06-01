@@ -53,6 +53,11 @@
     cursor: pointer;
 }
 
+.result h2 {
+    color: #fff;
+    margin: 10px 0;
+}
+
 .result{
     border-radius: 5px;
     margin-top: 20px;
@@ -61,4 +66,5 @@
     background-color: rgba(0, 0, 0, 0.771);
     color: rgb(0, 176, 47);
     height: auto;
+    font-size: large;
 }
