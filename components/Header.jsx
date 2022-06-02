@@ -6,12 +6,15 @@ export default function Header(){
     return (
         <header className="header">
             <h1>Cifra de César</h1>
-            <select onChange={e => setModo(e.target.value)}>
-                <option select='true'>Selecione o modo:</option>
-                <option value="Encriptação">Encriptação</option>
-                <option value="Decriptação">Decriptação</option>
-                <option value="Ambos">Ambos</option>
-            </select>
+            <div>
+                <label htmlFor="modo">Selecione o modo:</label>
+                <select id="modo" onChange={e => setModo(e.target.value)}>
+                    <option defaultValue={true}value="Demonstração">Demonstração</option>
+                    <option value="Encriptação">Encriptação</option>
+                    <option value="Decriptação">Decriptação</option>
+                    <option value="Ambos">Ambos</option>
+                </select>
+            </div>
         </header>
     )
 }

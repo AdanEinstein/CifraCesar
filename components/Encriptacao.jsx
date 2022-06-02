@@ -23,17 +23,17 @@ export default function Encriptacao() {
 			/>
 			<div className={styles.controls}>
 				<div>
-                    <label htmlFor="deslocamento">Deslocamento:</label>
-                    <input
-                        id="deslocamento"
-                        type="number"
-                        min="0"
-                        max="25"
-                        value={deslocamento}
-                        onChange={(e) => setDeslocamento(e.target.value)}
-                        placeholder="Digite o deslocamento"
-                    />
-                </div>
+					<label htmlFor="deslocamento">Deslocamento:</label>
+					<input
+						id="deslocamento"
+						type="number"
+						min="0"
+						max="25"
+						value={deslocamento}
+						onChange={(e) => setDeslocamento(e.target.value)}
+						placeholder="Digite o deslocamento"
+					/>
+				</div>
 				<button onClick={handleMsg}>Criptografar</button>
 			</div>
 			<div className={styles.result}>

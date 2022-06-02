@@ -14,7 +14,9 @@ export default function Preview() {
 
 	return (
 		<>
-			<h2 style={{textAlign: "center"}}>Demonstração da cifra de césar</h2>
+			<h2 style={{ textAlign: "center" }}>
+				Demonstração da cifra de césar
+			</h2>
 			<div className={styles.preview}>
 				<label htmlFor="deslocamento">Deslocamento</label>
 				<input
@@ -26,18 +28,20 @@ export default function Preview() {
 			</div>
 			<div className={styles.result}>
 				<table>
-					<tr>
-						{original.map((letra) => (
-							<td key={letra}>{letra}</td>
-						))}
-					</tr>
-					{chave && (
+					<tbody>
 						<tr>
-							{chave.map((letra) => (
+							{original.map((letra) => (
 								<td key={letra}>{letra}</td>
 							))}
 						</tr>
-					)}
+						{chave && (
+							<tr>
+								{chave.map((letra) => (
+									<td key={letra}>{letra}</td>
+								))}
+							</tr>
+						)}
+					</tbody>
 				</table>
 			</div>
 		</>

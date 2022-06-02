@@ -35,7 +35,7 @@ const Home = () => {
 						</div>
 					</>
 				)}
-				{(!modo || modo === "Selecione o modo:") && (
+				{(modo === "Demonstração" || !modo) && (
 					<div>
 						<Preview />
 					</div>

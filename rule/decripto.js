@@ -1,30 +1,26 @@
-import { key } from "./key" //importando a função que gera a chave
+import { key } from "./key"; //importando a função que gera a chave
 export const decripto = (mensagem, deslocamento) => {
 	// obtendo a chave a partir do deslocamento
-    const alfabeto = key(deslocamento)
+	const alfabeto = key(deslocamento);
 	// tranformando a mensagem encriptada em um array
-    const arrayMsgCript = mensagem.split("");
+	const arrayMsgCript = mensagem.split("");
 	// array vazio que será obtido na decriptação
 	const arrayMsg = [];
 	// tranformando uma letra por vez...
 	arrayMsgCript.forEach((letra) => {
-		// verificação caso a 'letra' seja uma string e diferente de um
-		// espaço em branco
-		if (typeof letra == "string" && letra != " ") {
-			// obtendo a posição da letra na chave
-			const posicaoAlfabetoEncript = alfabeto.chave.indexOf(
-				letra.toLowerCase()
-			);
-			// adição da letra obtida no alfabeto original a partir da posição 
-			// encontrada no 'arrayMsg'
-			arrayMsg.push(alfabeto.original[posicaoAlfabetoEncript]);
-		} else {
-			// caso contrário adicione a letra obtida no 'arrayMsg'
-			arrayMsg.push(letra);
-		}
+		// obtendo a posição da letra na chave
+		const posicaoAlfabetoEncript = alfabeto.chave.indexOf(
+			letra.toLowerCase()
+		);
+		// caso a posição seja igual a -1 a 'letra' não esta presente na chave
+		posicaoAlfabetoEncript === -1
+			? // se sim, adicione a 'letra' sem transforma-la
+			  arrayMsg.push(letra)
+			: // senão adicione pela letra obtida no alfabeto na posição encontrada
+			  arrayMsg.push(alfabeto.original[posicaoAlfabetoEncript]);
 	});
 	// tranformando o arrayMsg em uma string..
 	const msg = arrayMsg.join("");
 	// retornando a mensagem clara
 	return msg;
-}
+};

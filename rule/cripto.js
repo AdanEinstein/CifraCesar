@@ -8,20 +8,16 @@ export const cripto = (mensagem, deslocamento) => {
 	const arrayMsgCript = [];
 	// tranformando uma letra por vez...
 	arrayMsg.forEach((letra) => {
-		// verificação caso a 'letra' seja uma string e diferente de um
-		// espaço em branco
-		if (typeof letra == "string" && letra != " ") {
-			// obtendo a posição da letra no alfabeto original [a - z]
-			const posicaoAlfabetoOriginal = alfabeto.original.indexOf(
-				letra.toLowerCase()
-			);
-			// adição da letra obtida na chave a partir da posição 
-			// encontrada no 'arrayMsgCript'
-			arrayMsgCript.push(alfabeto.chave[posicaoAlfabetoOriginal]);
-		} else {
-			// caso contrário adicione a letra obtida no 'arrayMsgCript'
-			arrayMsgCript.push(letra);
-		}
+		// obtendo a posição da letra na chave
+		const posicaoAlfabetoOriginal = alfabeto.original.indexOf(
+			letra.toLowerCase()
+		);
+		// caso a posição seja igual a -1 a 'letra' não esta presente no alfabeto
+		posicaoAlfabetoOriginal === -1
+			? // se sim, adicione a 'letra' sem transforma-la
+			  arrayMsgCript.push(letra)
+			: // senão adicione pela letra obtida na chave na posição encontrada
+			  arrayMsgCript.push(alfabeto.chave[posicaoAlfabetoOriginal]);
 	});
 	// tranformando o arrayMsgCript em uma string..
 	const msgCript = arrayMsgCript.join("");

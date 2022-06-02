@@ -35,14 +35,20 @@ body .header {
     justify-content: space-between;
 }
 
-body .header select{
-    margin: 30px;
+body .header div label{
+    font-size: large;
+    color: #fff;
+}
+
+body .header div select{
+    margin: 0 20px;
     border: none;
     border-radius: 5px;
-    font-size: medium;
+    font-size: large;
     background-color: rgb(255, 68, 35);
     color: #fff;
     text-align: center;
+    padding: 10px;
 }
 
 body .footer {
