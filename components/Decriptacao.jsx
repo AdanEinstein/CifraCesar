@@ -1,8 +1,8 @@
-import styles from "../styles/Right.module.css";
+import styles from "../styles/Decriptacao.module.css";
 import { decripto } from "../rule/decripto";
 import { useState } from "react";
 
-export default function Right() {
+export default function Decriptacao() {
 	const [msgCript, setMsgCript] = useState("");
 	const [deslocamento, setDeslocamento] = useState(0);
 	const [msg, setMsg] = useState("");
@@ -12,7 +12,7 @@ export default function Right() {
     }
 
 	return (
-		<div className={styles.Right}>
+		<div className={styles.Decriptacao}>
 			<h1>Decriptação</h1>
 			<textarea
 				type="text"

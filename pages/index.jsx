@@ -1,11 +1,12 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import Left from "../components/Left";
-import Right from "../components/Right";
+import Encriptacao from "../components/Encriptacao";
+import Decriptacao from "../components/Decriptacao";
 import { useState } from "react";
 import ModoContext from "../contexts/ModoContext";
 import Preview from "../components/Preview";
 
+//Componente inicial
 const Home = () => {
 	const [modo, setModo] = useState("");
 	return (
@@ -14,27 +15,27 @@ const Home = () => {
 				<Header />
 			</ModoContext.Provider>
 			<div className="main">
-				{modo == "Encriptação" && (
+				{modo === "Encriptação" && (
 					<div className="left">
-						<Left />
+						<Encriptacao />
 					</div>
 				)}
-				{modo == "Decriptação" && (
+				{modo === "Decriptação" && (
 					<div className="right">
-						<Right />
+						<Decriptacao />
 					</div>
 				)}
-				{modo == "Ambos" && (
+				{modo === "Ambos" && (
 					<>
 						<div className="left">
-							<Left />
+							<Encriptacao />
 						</div>
 						<div className="right">
-							<Right />
+							<Decriptacao />
 						</div>
 					</>
 				)}
-				{(!modo || modo == "Selecione o modo:") && (
+				{(!modo || modo === "Selecione o modo:") && (
 					<div>
 						<Preview />
 					</div>

@@ -1,8 +1,9 @@
-import styles from "../styles/Left.module.css";
+import styles from "../styles/Encriptacao.module.css";
 import { useState } from "react";
 import { cripto } from "../rule/cripto";
 
-export default function Left() {
+//Componente de Encriptação
+export default function Encriptacao() {
 	const [msg, setMsg] = useState("");
 	const [msgCript, setMsgCript] = useState("");
 	const [deslocamento, setDeslocamento] = useState(0);
@@ -12,7 +13,7 @@ export default function Left() {
 	}
 
 	return (
-		<div className={styles.Left}>
+		<div className={styles.Encript}>
 			<h1>Encriptação</h1>
 			<textarea
 				type="text"

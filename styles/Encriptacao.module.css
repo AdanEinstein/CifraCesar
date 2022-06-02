@@ -1,8 +1,8 @@
-.Left{
+.Encript{
     color: black;
 }
 
-.Left h1 {
+.Encript h1 {
     text-align: center;
 
     border-radius: 5px 5px 0 0;
@@ -10,7 +10,7 @@
     padding: 10px;
 }
 
-.Left textarea{
+.Encript textarea{
     font-size: large;
     margin: 20px 0;
     padding: 10px;

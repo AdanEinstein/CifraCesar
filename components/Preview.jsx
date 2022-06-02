@@ -2,6 +2,7 @@ import styles from "../styles/Preview.module.css";
 import { key } from "../rule/key";
 import { useEffect, useState } from "react";
 
+//Componente de desmonstração da chave
 export default function Preview() {
 	const { original } = key(0);
 	const [deslocamento, setDeslocamento] = useState(0);
@@ -27,13 +28,13 @@ export default function Preview() {
 				<table>
 					<tr>
 						{original.map((letra) => (
-							<td>{letra}</td>
+							<td key={letra}>{letra}</td>
 						))}
 					</tr>
 					{chave && (
 						<tr>
 							{chave.map((letra) => (
-								<td>{letra}</td>
+								<td key={letra}>{letra}</td>
 							))}
 						</tr>
 					)}
