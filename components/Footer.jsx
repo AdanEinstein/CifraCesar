@@ -1,7 +1,7 @@
 export default function Footer(){
     return (
         <footer className="footer">
-            <span>Direitos reservados a Grupo 7 - TADS</span>
+            <span>Direitos reservados a Adan Einstein</span>
         </footer>
     )
 }
